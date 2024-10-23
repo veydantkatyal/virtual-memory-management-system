@@ -1,0 +1,4 @@
+{
+    "num_pages": 256,
+    "num_frames": 64
+}

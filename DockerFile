@@ -1,0 +1,10 @@
+FROM gcc:latest
+
+COPY ./src /usr/src/vmm_project
+WORKDIR /usr/src/vmm_project
+
+RUN apt-get update && \
+    apt-get install -y libjson-c-dev && \
+    make
+
+CMD ["./vmm"]

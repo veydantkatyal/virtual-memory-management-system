@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS = -Wall -g
+
+all: vmm
+
+vmm: main.c vmm.c utils.c
+	$(CC) $(CFLAGS) -o vmm main.c vmm.c utils.c -ljson-c
+
+clean:
+	rm -f vmm
