@@ -44,10 +44,10 @@ To run this project, you need:
 
     bash
 
-    `git clone https://github.com/yourusername/vmm_project.git
-    cd vmm_project`
+    `git clone https://github.com/veydantkatyal/virtual-memory-management-system.git
+     cd virtual-memory-management-system`
 
-2.  **Compile the project** using the provided Makefile:
+3.  **Compile the project** using the provided Makefile:
 
     bash
 
@@ -63,7 +63,7 @@ To run this project, you need:
 
     bash
 
-    `./vmm`
+    `./virtual-memory-management-system`
 
     The program will load the configuration from the `config.txt` file and simulate memory accesses using the FIFO page replacement algorithm.
 
@@ -122,28 +122,51 @@ Here is a sample **Valgrind memory check report** stored in the `valgrind_report
 vbnet
 
 `==23749== Memcheck, a memory error detector
+
 ==23749== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+
 ==23749== Using Valgrind-3.17.0 and LibVEX; rerun with -h for copyright info
+
 ==23749== Command: ./vmm
+
 ==23749==
+
 Starting Virtual Memory Management System...
+
 Configuration: 256 pages, 64 frames
+
 Page fault! Page 1 not in memory.
+
 Page 1 loaded into frame 0
+
 Page fault! Page 2 not in memory.
+
 Page 2 loaded into frame 1
+
 Page fault! Page 3 not in memory.
+
 Page 3 loaded into frame 2
+
 ...
+
 ==23749==
+
 ==23749== HEAP SUMMARY:
+
 ==23749==     in use at exit: 0 bytes in 0 blocks
+
 ==23749==   total heap usage: 8 allocs, 8 frees, 1,036 bytes allocated
+
 ==23749==
+
 ==23749== All heap blocks were freed -- no leaks are possible
+
 ==23749==
+
 ==23749== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
 ==23749== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)`
+
 
 This output confirms that no memory leaks were found, and all heap blocks were freed correctly.
 
@@ -152,26 +175,37 @@ This output confirms that no memory leaks were found, and all heap blocks were f
 **Directory Structure**
 -----------------------
 
-bash
-
 `vmm_project/
-│
-├── src/
+
+│── src/
+
 │   ├── main.c                  # Main entry point
+
 │   ├── vmm.c                   # Core logic for Virtual Memory Management
+
 │   ├── vmm.h                   # Header file for VMM definitions
+
 │   ├── utils.c                 # Utility functions for config loading
+
 │   ├── utils.h                 # Header for utility functions
+
 │   ├── config.txt              # Configuration file
+
 │   └── Makefile                # Makefile for building the project
-│
+
 ├── test/
+
 │   ├── test_vmm.c              # Unit tests for VMM system
+
 │   └── test_utils.c            # Unit tests for utility functions
-│
+
 ├── run_tests.sh                # Shell script for running tests
+
+
 ├── valgrind_report.txt         # Memory profiling report
+
 ├── .gitignore                  # Gitignore file
+
 └── README.md                   # Project documentation`
 
 * * * * *
