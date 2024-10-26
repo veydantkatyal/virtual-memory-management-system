@@ -213,4 +213,5 @@ This output confirms that no memory leaks were found, and all heap blocks were f
 **License**
 -----------
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
+## LICENSE
+This is project is licensed under [MIT License](https://github.com/veydantkatyal/virtual-memory-management-system/blob/main/LICENSE), please go through it carefully, before using it.
